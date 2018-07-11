@@ -18,7 +18,9 @@ public class Produto {
 	
 	@NotNull
 	private String nome;
+	@NotNull
 	private Double preco;
+	@NotNull
 	private Integer quantidade;
 	/**
 	 * @return the id
