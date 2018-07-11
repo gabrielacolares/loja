@@ -13,39 +13,26 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @ControllerAdvice
 public class ExceptionHandler extends ResponseEntityExceptionHandler {
-	@Autowired
-	MessageSource messageSource;
+	//@Autowired
+	//MessageSource messageSource;
 	
 	@Override
 	protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
-		String msgUsuario = messageSource.getMessage("msg.invalida", null, LocaleContextHolder.getLocale());
+		//String msgUsuario = messageSource.getMessage("msg.invalida", null, LocaleContextHolder.getLocale());
 		String msgDev = ex.getCause().toString();
 		// TODO Auto-generated method stub
-		return handleExceptionInternal(ex, new Erro(msgUsuario, msgDev), headers, HttpStatus.BAD_REQUEST, request);
+		return handleExceptionInternal(ex, new Erro(msgDev), headers, HttpStatus.BAD_REQUEST, request);
 	}
 	
 
 	public static class Erro {
-		private String msgUsuario;
 		private String msgDev;
-		public Erro(String msgUsuario, String msgDev) {
+		public Erro(String msgDev) {
 			super();
-			this.msgUsuario = msgUsuario;
 			this.msgDev = msgDev;
 		}
-		/**
-		 * @return the msgUsuario
-		 */
-		public String getMsgUsuario() {
-			return msgUsuario;
-		}
-		/**
-		 * @param msgUsuario the msgUsuario to set
-		 */
-		public void setMsgUsuario(String msgUsuario) {
-			this.msgUsuario = msgUsuario;
-		}
+		
 		/**
 		 * @return the msgDev
 		 */
