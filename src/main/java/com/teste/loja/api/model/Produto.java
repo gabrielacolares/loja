@@ -15,6 +15,8 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
+	private Double preco;
+	private Integer quantidade;
 	/**
 	 * @return the id
 	 */
@@ -38,6 +40,31 @@ public class Produto {
 	 */
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	/**
+	 * @return the preco
+	 */
+	public Double getPreco() {
+		return preco;
+	}
+	/**
+	 * @param preco the preco to set
+	 */
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
+	/**
+	 * @return the quantidade
+	 */
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+	/**
+	 * @param quantidade the quantidade to set
+	 */
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
 	}
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
