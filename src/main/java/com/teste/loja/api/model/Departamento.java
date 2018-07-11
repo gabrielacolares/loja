@@ -4,15 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-
 @Entity
-@Table(name = "produto")
-public class Produto {
+@Table(name = "departamento")
+public class Departamento {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,78 +17,35 @@ public class Produto {
 	
 	@NotNull
 	private String nome;
-	@NotNull
-	private Double preco;
-	@NotNull
-	private Integer quantidade;
-	
-	@ManyToOne
-	@JoinColumn(name = "id_departamento")
-	private Departamento departamento;
+
 	/**
 	 * @return the id
 	 */
 	public Long getId() {
 		return id;
 	}
+
 	/**
 	 * @param id the id to set
 	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	/**
 	 * @return the nome
 	 */
 	public String getNome() {
 		return nome;
 	}
+
 	/**
 	 * @param nome the nome to set
 	 */
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	/**
-	 * @return the preco
-	 */
-	public Double getPreco() {
-		return preco;
-	}
-	/**
-	 * @param preco the preco to set
-	 */
-	public void setPreco(Double preco) {
-		this.preco = preco;
-	}
-	/**
-	 * @return the quantidade
-	 */
-	public Integer getQuantidade() {
-		return quantidade;
-	}
-	/**
-	 * @param quantidade the quantidade to set
-	 */
-	public void setQuantidade(Integer quantidade) {
-		this.quantidade = quantidade;
-	}
-	
-	
-	
-	/**
-	 * @return the departamento
-	 */
-	public Departamento getDepartamento() {
-		return departamento;
-	}
-	/**
-	 * @param departamento the departamento to set
-	 */
-	public void setDepartamento(Departamento departamento) {
-		this.departamento = departamento;
-	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -102,6 +56,7 @@ public class Produto {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
@@ -113,7 +68,7 @@ public class Produto {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Produto other = (Produto) obj;
+		Departamento other = (Departamento) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -121,5 +76,6 @@ public class Produto {
 			return false;
 		return true;
 	}
+	
 
 }
