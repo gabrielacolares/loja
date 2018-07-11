@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: loja-api
+Implementation-Version: 1.0.0-SNAPSHOT
+Built-By: Gabriela Colares
+Implementation-Vendor-Id: com.teste.loja-api
+Build-Jdk: 1.8.0_171
+Implementation-URL: http://projects.spring.io/spring-boot/loja-api/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
