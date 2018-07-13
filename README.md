@@ -2,8 +2,6 @@
 
 Tecnologias
 
-Foram utilizados:
-
 Spring Boot
 MySQL 5.7
 Flayway
