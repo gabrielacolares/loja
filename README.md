@@ -1,8 +1,10 @@
 # loja-api
 
-Baixar e instalar MySQL 5.7
+1- Baixar e instalar MySQL 5.7
 
-Criar uma base chamada loja
+2 - Criar uma base chamada loja
+
+3 - Executar o comando $ mvn spring-boot:run
 
 Foram criados os serviços http (GET, POST, PUT, DELETE) para o recurso Produto
 
