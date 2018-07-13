@@ -1,5 +1,16 @@
 # loja-api
 
+Tecnologias
+
+Foram utilizados:
+
+Spring Boot
+MySQL 5.7
+Flayway
+
+
+Utilização
+
 1- Baixar e instalar MySQL 5.7
 
 2 - Criar uma base chamada loja
