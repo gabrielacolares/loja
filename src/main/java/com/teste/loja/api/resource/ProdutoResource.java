@@ -58,4 +58,9 @@ public class ProdutoResource {
 		return ResponseEntity.ok(produtoAtual);
 		
 	}
+	
+	@GetMapping("/name/{name}")
+	public List<Produto> getByFilter(@PathVariable String name){
+		return produtoService.getByFilter(name);
+	}
 }
