@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    stages {
         stages {
             stage('Build') {
                 steps {
@@ -8,15 +7,14 @@ pipeline {
                     sh ' mvn spring-boot:clean install'
                 }
             }
-        stage('Stage2') {
-            steps {
-                sh 'echo "Hello World"'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
+            stage('Test') {
+                steps {
+                    sh 'echo "Hello World"'
+                    sh '''
+                        echo "Multiline shell steps works too"
+                        ls -lah
+                    '''
+                }
             }
-        }
-
     }
 }
