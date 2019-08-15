@@ -4,8 +4,8 @@ pipeline {
             stage('Build') {
                 steps {
                     sh 'echo "build"'
-                    sh 'cd /gs-gradle'
-                    sh ' gradle'
+                    sh 'cd /gs-gradle/test'
+                    sh ' run.sh'
                 }
             }
             stage('Test') {
