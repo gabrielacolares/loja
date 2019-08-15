@@ -1,7 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stages {
+            stage('Build') {
+                steps {
+                    sh 'echo "build"'
+                    sh ' mvn spring-boot:clean install'
+                }
+            }
+        stage('Stage2') {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
@@ -10,5 +17,6 @@ pipeline {
                 '''
             }
         }
+
     }
 }
